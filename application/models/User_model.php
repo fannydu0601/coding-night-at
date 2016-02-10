@@ -3,7 +3,7 @@
 class User_model extends CI_Model{
 	public function insert(){
 		$data = array(
-		     "username"=>$this->input->post("userename"),
+		     "username"=>$this->input->post("username"),
 			 "password"=>$this->input->post("password"),
 			 "firstname"=>$this->input->post("firstname"),
 			 "lastname"=>$this->input->post("lastname")
