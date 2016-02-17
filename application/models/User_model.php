@@ -10,4 +10,24 @@ class User_model extends CI_Model{
 		);
 		return $this->db->insert("user",$data);
 	}
+	/* public function getUser(){
+		$this->db->select("username,password");
+		$this->db->from("user");
+		$query = $this->db->get();
+		return query->result();
+	} */
+	public function login($username,$password){
+		$this->db->select("username,password");
+		$this->db->from("user");
+		$this->db->where("username",$username);
+		$this->db->where("password",$password);
+		$this->db->limit(1);
+		$query = $this->db->get();
+		if($query->num_rows()==1){
+			return $query->result();
+		}
+		else{
+			return false;
+		}
+	}
 }

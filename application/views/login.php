@@ -6,6 +6,8 @@
 		</head>
 				
 		<body>
+			<?= validation_errors()?>
+			<?= form_open(current_url())?>
 			<table>
 				<tr><td>Username:</td></tr>
 				<tr><td>
