@@ -28,9 +28,6 @@ class Dashboard extends CI_Controller {
 		session_destroy();
 		redirect("dashboard", "refresh");
 	}
-	
-
-	
 }
 
 

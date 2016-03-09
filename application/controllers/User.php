@@ -5,8 +5,6 @@ class User extends CI_Controller {
 	public function login()
 	
 	{
-		
-		
 		$this->load->model("user_model");
 		
 		$this->form_validation->set_rules("username", "Username","required");
